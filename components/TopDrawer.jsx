@@ -3,20 +3,20 @@ import Box from '@mui/material/Box';
 import SwipeableDrawer from '@mui/material/SwipeableDrawer';
 import Button from '@mui/material/Button';
 import List from '@mui/material/List';
-import Divider from '@mui/material/Divider';
-import ListItem from '@mui/material/ListItem';
-import ListItemButton from '@mui/material/ListItemButton';
-import ListItemIcon from '@mui/material/ListItemIcon';
-import ListItemText from '@mui/material/ListItemText';
-import InboxIcon from '@mui/icons-material/MoveToInbox';
-import MailIcon from '@mui/icons-material/Mail';
-import { Navigate, useNavigate } from 'react-router';
 
-const options = 'Multiple Choice'
+import { Navigate, useNavigate } from 'react-router';
+import { useEffect, useState } from 'react'; 
+import DictionarySelect from '../components/DictionarySelect';
+
+
+
 
 export default function SwipeableTemporaryDrawer(props) {
-  
+
+
+
    const navigate = useNavigate()
+
   const [state, setState] = React.useState({
     top: false,
     left: false,
@@ -44,16 +44,7 @@ export default function SwipeableTemporaryDrawer(props) {
       onKeyDown={toggleDrawer(anchor, false)}
     >
       <List>
-        {['MultiChoice'].map((text, index) => (
-          <ListItem key={text} disablePadding>
-            <ListItemButton onClick={() => navigate('/multi')}>
-              <ListItemIcon>
-                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-              </ListItemIcon>
-              <ListItemText primary={text} />
-            </ListItemButton>
-          </ListItem>
-        ))}
+      <DictionarySelect setActiveDictionary={props.setActiveDictionary} />
       </List>
     </Box>
   );

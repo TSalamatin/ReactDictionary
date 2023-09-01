@@ -14,6 +14,7 @@ export default function DictionarySelect(props) {
         if (data.length > 0) {
           props.setActiveDictionary(data[0]);
           setSelectedDictionary(data[0])
+        
         }
       })
       .catch((e) => console.log(e));

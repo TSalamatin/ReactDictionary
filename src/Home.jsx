@@ -1,8 +1,7 @@
 import { useEffect, useState } from 'react';
 import { Chip, Stack, Grid, Typography, Button, Accordion, AccordionSummary, AccordionDetails } from '@mui/material';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-import TopDrawer from '../components/TopDrawer'
-import DictionarySelect from '../components/DictionarySelect'
+
 
 const Home = (props) => {
   
@@ -28,10 +27,8 @@ const Home = (props) => {
       display='flex'
     >
       <Grid item xs={12} >
-        <TopDrawer  />
       </Grid>
       <Grid
-      
         container
         spacing={4}
         direction="row"
