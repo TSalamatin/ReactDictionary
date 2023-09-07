@@ -34,12 +34,12 @@
   "main": "vite.config.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/axlrommel/dictionary-react.git"
+    "url": "git+https://github.com/TSalamatin/dictionary-api"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/axlrommel/dictionary-react/issues"
-  },
-  "homepage": "https://github.com/axlrommel/dictionary-react#readme"
+    "url": "https://github.com/TSalamatin/dictionary-api/issues"
+  }
+
 }
