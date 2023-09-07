@@ -34,12 +34,12 @@
   "main": "vite.config.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/TSalamatin/dictionary-api"
+    "url": "git+https://github.com/TSalamatin/ReactDictionary"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/TSalamatin/dictionary-api/issues"
+    "url": "https://github.com/TSalamatin/ReactDictionary/issues"
   }
 
 }
