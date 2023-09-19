@@ -9,12 +9,12 @@ import TopDrawer from '../components/TopDrawer'
 
 
 function App() {
-
+console.log('App initiated')
   const [activeDictionary, setActiveDictionary] = useState(undefined);
 
   return (
     <ThemeProvider theme={theme}>
-      <CssBaseline />
+      
       
       <TopDrawer setActiveDictionary={setActiveDictionary}/>
 
