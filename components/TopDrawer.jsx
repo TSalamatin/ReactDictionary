@@ -11,7 +11,7 @@ import DictionarySelect from '../components/DictionarySelect';
 
 
 
-export default function SwipeableTemporaryDrawer(props) {
+export default function SwipeableTemporaryDrawer() {
 
 
 
@@ -44,7 +44,7 @@ export default function SwipeableTemporaryDrawer(props) {
       onKeyDown={toggleDrawer(anchor, false)}
     >
       <List>
-      <DictionarySelect setActiveDictionary={props.setActiveDictionary} />
+      <DictionarySelect />
       </List>
     </Box>
   );
@@ -53,7 +53,7 @@ export default function SwipeableTemporaryDrawer(props) {
     <div>
      
         <React.Fragment key='top'>
-          <Button onClick={toggleDrawer('top', true)}>Menu</Button>
+          <Button onClick={toggleDrawer('top', true)}>Dictionary Select</Button>
           <SwipeableDrawer
             anchor='top'
             open={state['top']}

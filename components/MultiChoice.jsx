@@ -1,9 +1,11 @@
 import { useEffect, useState } from 'react';
 import { Chip, Stack, Grid, Typography, Button, Accordion, AccordionSummary, AccordionDetails } from '@mui/material';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import { useDictionary } from '../utils/DictionaryContext';
 
-export default function MultiChoice(props) {
+export default function MultiChoice() {
 
+  const [state , dispatch, active, setActive] = useDictionary()
 
   const [data, setData] = useState([]); // Initialize data state with an empty array
   const [correctIndex, setCorrectIndex] = useState(-1)
@@ -11,7 +13,7 @@ export default function MultiChoice(props) {
   const [selectedIndex, setSelectedIndex] = useState(-1)
 
   const getWords = () => {
-    fetch(`https://1rnoszgn46.execute-api.us-east-1.amazonaws.com/multichoice?tag=${props.activeDictionary.tags[0]}`)
+    fetch(`https://1rnoszgn46.execute-api.us-east-1.amazonaws.com/multichoice?tag=${active.tags[0]}`)
       .then((data) => data.json())
       .then((data) => {
 

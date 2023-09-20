@@ -3,13 +3,14 @@ import { Chip, Stack, Grid, Typography, Button, Accordion, AccordionSummary, Acc
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
 
-const Home = (props) => {
+const Home = () => {
   
-  
+  const [state , dispatch, active, setActive] = useDictionary()
+
   const [wordAndDefinition, setWordAndDefinition] = useState(undefined);
 
   const getRandomWord = () => {
-    fetch(`https://1rnoszgn46.execute-api.us-east-1.amazonaws.com/random-word?tag=${props.activeDictionary.tags[0]}`
+    fetch(`https://1rnoszgn46.execute-api.us-east-1.amazonaws.com/random-word?tag=${active.tags[0]}`
     )
       .then((data) => data.json())
       .then((data) => setWordAndDefinition(data))

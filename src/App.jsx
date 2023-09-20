@@ -6,23 +6,22 @@ import Home from './Home';
 import MultiChoice from '../components/MultiChoice';
 import { useEffect, useState } from 'react';
 import TopDrawer from '../components/TopDrawer'
-
+import DictionaryProvider from '../utils/DictionaryContext';
 
 function App() {
-console.log('App initiated')
-  const [activeDictionary, setActiveDictionary] = useState(undefined);
+
 
   return (
     <ThemeProvider theme={theme}>
-      
-      
-      <TopDrawer setActiveDictionary={setActiveDictionary}/>
+      <CssBaseline />
+      <DictionaryProvider>
+        <TopDrawer />
 
         <Routes>
-        <Route path='/multi' element={<Home activeDictionary={activeDictionary} />} />
-        <Route path='/' element={<MultiChoice activeDictionary={activeDictionary}/>}/>
-      
-      </Routes>
+          <Route path='/multi' element={<Home />} />
+          <Route path='/' element={<MultiChoice />} />
+        </Routes>
+      </DictionaryProvider>
     </ThemeProvider>
   );
 }
